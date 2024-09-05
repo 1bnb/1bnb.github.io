@@ -3,7 +3,8 @@ import Staknet from "../assets/staknet.png"
 import Stakeriod from "../assets/stakeriod.png"
 import Stakempu from "../assets/stakempu.png"
 import Stakerunes from "../assets/stakerunes.png"
-import Oslor from "../assets/oslor.png"
+import Oslor_1 from "../assets/oslor_1.png"
+import Oslor_2 from "../assets/oslor_2.png"
 import Audit from "../assets/audit.png"
 import otc_1 from "../assets/otc_1.png"
 import otc_2 from "../assets/otc_2.png"
@@ -25,7 +26,8 @@ const data = [{
     title: "One Blockchain official website",
     content: "I wrote an official blockchain website, which includes wallet login, token minting, supply chain query, balance, authorization, and other related functions.",
     photo: [
-        { id: 1, name: "Oslor website", photo: Oslor },
+        { id: 1, name: "Oslor website", photo: Oslor_1 },
+        { id: 2, name: "Oslor website", photo: Oslor_2 },
     ]
 }, {
     title: "One Contract Audit Website",
