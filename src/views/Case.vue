@@ -12,9 +12,13 @@ import otc_3 from "../assets/otc_3.png"
 import otc_4 from "../assets/otc_4.png"
 import trading_1 from "../assets/trading_1.png"
 import trading_2 from "../assets/trading_2.png"
+import pumpfun_1 from "../assets/pumpfun_1.png"
+import pumpfun_2 from "../assets/pumpfun_2.png"
+import smart_1 from "../assets/smart_1.png"
+import smart_2 from "../assets/smart_2.png"
 
 const data = [{
-    title: "Four Blockchain Defi Project",
+    title: "Blockchain Defi Project",
     content: "I have written 4 blockchain financial projects. They are all adaptive projects for computer and mobile terminals. The backend is connected to Ethereum, supports login to Little Fox Wallet and other wallets, and provides users with efficient and convenient blockchain services.",
     photo: [
         { id: 1, name: "staknet website", photo: Staknet },
@@ -23,20 +27,20 @@ const data = [{
         { id: 4, name: "stakerunes website", photo: Stakerunes },
     ]
 }, {
-    title: "One Blockchain official website",
+    title: "Blockchain official website",
     content: "I wrote an official blockchain website, which includes wallet login, token minting, supply chain query, balance, authorization, and other related functions.",
     photo: [
         { id: 1, name: "Oslor website", photo: Oslor_1 },
         { id: 2, name: "Oslor website", photo: Oslor_2 },
     ]
 }, {
-    title: "One Contract Audit Website",
+    title: "Contract Audit Website",
     content: "I wrote a contract audit website that can audit the security of smart contracts, token concentration, blacklist functions, proxy contracts, whether it is a Pixiu, honeypot, etc.",
     photo: [
         { id: 1, name: "Audit website", photo: Audit },
     ]
 }, {
-    title: "One OTC exchange",
+    title: "OTC Exchange Plantform",
     content: "I have developed a comprehensive and efficient OTC (Over-The-Counter) exchange platform, which focuses on providing a safe, transparent and flexible trading environment for various financial assets. It aims to connect buyers and sellers around the world and promote the efficient circulation and trading of non-standardized financial products. At the same time, it integrates advanced blockchain technology and smart contract functions to enhance the trust and automation level of transactions and meet the diversified and personalized trading needs of the market.",
     photo: [
         { id: 1, name: "OTC website", photo: otc_1 },
@@ -45,11 +49,25 @@ const data = [{
         { id: 4, name: "OTC website", photo: otc_4 },
     ]
 }, {
-    title: "One Perpetual Contract Exchange",
+    title: "Perpetual Contract Exchange Plantform",
     content: "I have developed an innovative perpetual contract trading platform that integrates advanced trading systems, risk management mechanisms and user-friendly interface design, tailored for professional investors and traders who seek efficient and flexible trading experience. The platform supports multiple cryptocurrencies as margin and provides 24/7 uninterrupted trading services, allowing global users to seamlessly access and participate in high-leverage, non-expiration perpetual contract transactions. By introducing deep liquidity pools, high-speed trading engines and smart contract technology, we ensure the rapid execution of transactions, secure storage of funds and automatic execution of contract terms, creating a safe and vibrant perpetual contract trading ecosystem for users.",
     photo: [
         { id: 1, name: "Perpetual Contract", photo: trading_1 },
         { id: 2, name: "Perpetual Contract", photo: trading_2 },
+    ]
+}, {
+    title: "Similate PumpFun Plantform",
+    content: "A meme coin launch platform that imitates pumpfun",
+    photo: [
+        { id: 1, name: "Similate PumpFun", photo: pumpfun_1 },
+        { id: 2, name: "Similate PumpFun", photo: pumpfun_2 },
+    ]
+}, {
+    title: "Smart Wallet Project",
+    content: "A smart wallet monitoring project",
+    photo: [
+        { id: 1, name: "Smart Wallet", photo: smart_1 },
+        { id: 2, name: "Smart Wallet", photo: smart_2 },
     ]
 }]
 
