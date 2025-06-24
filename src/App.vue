@@ -2,38 +2,47 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const scrollTop = ref(0);
-const year = ref(new Date().getFullYear());
+const date = ref(new Date());
+
+// 格式化函数
+const formatDateTime = (d: Date) => {
+  const pad = (n: number) => n.toString().padStart(2, '0');
+  return `${d.getFullYear()}年${pad(d.getMonth() + 1)}月${pad(d.getDate())}日 ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+};
 
 const updateScrollPosition = () => {
   scrollTop.value = window.scrollY;
 };
 
 let scrollListener: any;
+let timer: number;
 
 onMounted(() => {
   scrollListener = () => updateScrollPosition();
   window.addEventListener('scroll', scrollListener);
   updateScrollPosition();
+
+  // 更新时间
+  timer = window.setInterval(() => {
+    date.value = new Date();
+  }, 1000);
 });
 
 onUnmounted(() => {
   window.removeEventListener('scroll', scrollListener);
+  clearInterval(timer);
 });
-
 </script>
 
 <template>
   <header class="text-gray-300 bg-gray-950 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center fixed z-20" :class="scrollTop > 10 ?
+    <div class="w-full flex justify-between p-5 flex-col md:flex-row  items-center fixed z-20" :class="scrollTop > 10 ?
       'backdrop-blur-sm bg-gray-950/80 border-b border-gray-800 border-solid' : 'backdrop-blur-sm border-gray-950/10'">
       <div class="flex title-font font-medium items-center text-gray-300 mb-4 md:mb-0">
-        <span class="ml-3 text-xl"><router-link to="/" class="mr-5 hover:text-gray-500">Welcome</router-link></span>
+        <span class="ml-3 text-xl"><router-link to="/" class="mr-5 hover:text-gray-500">Welcome you!</router-link></span>
       </div>
-      <div class="md:ml-auto flex flex-wrap items-center text-base justify-center relative z-20">
-        <router-link to="/case" class="mr-5 hover:text-purple-500">Web3 Case</router-link>
-        <router-link to="/technology" class="mr-5 hover:text-purple-500">Technology</router-link>
-        <router-link to="/about" class="mr-5 hover:text-purple-500">About Me</router-link>
-        <router-link to="/contact" class="mr-5 hover:text-purple-500">Contact Us</router-link>
+      <div class="right items-center text-base relative z-20 hidden md:flex">
+        <span>{{ formatDateTime(date) }}</span>
       </div>
     </div>
   </header>
