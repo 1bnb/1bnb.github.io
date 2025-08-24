@@ -3,13 +3,6 @@ type: docker
 name: local-build-run
 
 steps:
-  - name: clone-repo
-    image: drone/git
-    settings: 
-      retries: 5     
-    commands:
-      - git clone https://github.com/1bnb/1bnb.github.io.git /drone/src
-
   - name: build-image
     image: docker:24.0
     volumes:
