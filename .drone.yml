@@ -9,7 +9,6 @@ steps:
       - name: dockersock
         path: /var/run/docker.sock
     commands:
-      - cd /drone/src
       - docker build -t my-vue-app:latest .
 
   - name: run-container
