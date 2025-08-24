@@ -18,7 +18,7 @@ steps:
         path: /var/run/docker.sock
     commands:
       - docker rm -f my-vue-app || true
-      - docker run -d -p 8080:80 --name my-vue-app my-vue-app:latest
+      - docker run -d -p 8081:80 --name my-vue-app my-vue-app:latest
 
 volumes:
   - name: dockersock
