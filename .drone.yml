@@ -3,27 +3,27 @@ type: docker
 name: local-build-run
 
 steps:
+  - name: build-app
+    image: node:18
+    commands:
+      - npm install
+      - npm run build
+
   - name: build-image
-    image: docker:24.0  # 使用官方 docker CLI 镜像
-    volumes:
-      - name: dockersock
-        path: /var/run/docker.sock
-    commands:
-      - docker build -t my-vue-app:latest .
+    image: plugins/docker
+    settings:
+      repo: my-vue-app
+      tags: latest
+      dockerfile: ./Dockerfile
+      # 如果你只想本地 build，不推 registry，可以加上：
+      dry_run: true
 
-  - name: run-container
-    image: docker:24.0
-    volumes:
-      - name: dockersock
-        path: /var/run/docker.sock
-    commands:
-      - docker rm -f my-vue-app || true
-      - docker run -d -p 8081:80 --name my-vue-app my-vue-app:latest
-
-volumes:
-  - name: dockersock
-    host:
-      path: /var/run/docker.sock
+  # 如果想要在 pipeline 内测试运行容器，可以直接用 services
+services:
+  - name: vue-app
+    image: my-vue-app:latest
+    ports:
+      - 8081:80
 
 trigger:
   branch:
