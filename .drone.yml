@@ -1,0 +1,30 @@
+kind: pipeline
+type: docker
+name: local-build-run
+
+steps:
+  - name: build-image
+    image: docker:24.0  # 使用官方 docker CLI 镜像
+    volumes:
+      - name: dockersock
+        path: /var/run/docker.sock
+    commands:
+      - docker build -t my-vue-app:latest .
+
+  - name: run-container
+    image: docker:24.0
+    volumes:
+      - name: dockersock
+        path: /var/run/docker.sock
+    commands:
+      - docker rm -f my-vue-app || true
+      - docker run -d -p 8080:80 --name my-vue-app my-vue-app:latest
+
+volumes:
+  - name: dockersock
+    host:
+      path: /var/run/docker.sock
+
+trigger:
+  branch:
+    - main

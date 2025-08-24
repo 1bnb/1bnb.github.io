@@ -3,10 +3,11 @@
 </script>
 
 <template>
-    <section class="text-gray-600 body-font">
+    <section class="text-gray-600 body-font" style="min-height: calc(100vh - 60px);">
         <div class="container lg:px-20 px-5 pt-28 pb-20 mx-auto">
             <div class="title_ w-full mb-5">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-300 capitalize">Button border effects
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-300 capitalize">Button border
+                    effects
                 </h1>
                 <p class="lg:w-1/2 w-full leading-relaxed text-gray-500 text-left">Button border effects are a design
                     element that adds visual interest and interactivity to buttons on a user interface.</p>
@@ -21,7 +22,8 @@
                             </div>
                         </div>
                         <h2 class="text-lg text-gray-300 font-medium title-font mb-2 capitalize">Border glare</h2>
-                        <p class="leading-relaxed text-base">A button border glare effect, which lights up the button when
+                        <p class="leading-relaxed text-base">A button border glare effect, which lights up the button
+                            when
                             the mouse is hovering.</p>
                     </div>
                 </div>
@@ -34,7 +36,8 @@
                             </div>
                         </div>
                         <h2 class="text-lg text-gray-300 font-medium title-font mb-2 capitalize">Border glare</h2>
-                        <p class="leading-relaxed text-base">A button border glare effect, which lights up the button when
+                        <p class="leading-relaxed text-base">A button border glare effect, which lights up the button
+                            when
                             the mouse is hovering.</p>
                     </div>
                 </div>
@@ -47,7 +50,8 @@
                             </div>
                         </div>
                         <h2 class="text-lg text-gray-300 font-medium title-font mb-2 capitalize">Border glare</h2>
-                        <p class="leading-relaxed text-base">A button border glare effect, which lights up the button when
+                        <p class="leading-relaxed text-base">A button border glare effect, which lights up the button
+                            when
                             the mouse is hovering.</p>
                     </div>
                 </div>
@@ -60,7 +64,8 @@
                             </div>
                         </div>
                         <h2 class="text-lg text-gray-300 font-medium title-font mb-2 capitalize">Border glare</h2>
-                        <p class="leading-relaxed text-base">A button border glare effect, which lights up the button when
+                        <p class="leading-relaxed text-base">A button border glare effect, which lights up the button
+                            when
                             the mouse is hovering.</p>
                     </div>
                 </div>
@@ -73,7 +78,8 @@
                             </div>
                         </div>
                         <h2 class="text-lg text-gray-300 font-medium title-font mb-2 capitalize">Border glare</h2>
-                        <p class="leading-relaxed text-base">A button border glare effect, which lights up the button when
+                        <p class="leading-relaxed text-base">A button border glare effect, which lights up the button
+                            when
                             the mouse is hovering.</p>
                     </div>
                 </div>
@@ -86,7 +92,8 @@
                             </div>
                         </div>
                         <h2 class="text-lg text-gray-300 font-medium title-font mb-2 capitalize">Border glare</h2>
-                        <p class="leading-relaxed text-base">A button border glare effect, which lights up the button when
+                        <p class="leading-relaxed text-base">A button border glare effect, which lights up the button
+                            when
                             the mouse is hovering.</p>
                     </div>
                 </div>

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section class="text-gray-600 body-font">
+    <section class="text-gray-600 body-font" style="min-height: calc(100vh - 60px);">
         <div class="container lg:px-20 px-5 pt-20 pb-10 mx-auto flex flex-wrap">
             <div class="title_ lg:w-1/2 w-full lg:mb-0 rounded-lg overflow-hidden grid place-items-center">
                 <img alt="feature" class="object-cover object-center -mt-24" src="../assets/personal.png"
@@ -22,7 +22,8 @@
                         <h2 class="text-gray-300 text-lg title-font font-medium mb-3 capitalize">Personal Profile</h2>
                         <p class="leading-relaxed text-base">
                             Hey, I'm a Web3 engineer with 7 years of experience, having worked on both front-end and
-                            back-end development. Currently, I'm deeply interested in AI and Web3, constantly exploring and
+                            back-end development. Currently, I'm deeply interested in AI and Web3, constantly exploring
+                            and
                             discovering new technologies and algorithms.
                         </p>
                     </div>
@@ -37,9 +38,11 @@
                         </svg>
                     </div>
                     <div class="flex-grow">
-                        <h2 class="text-gray-300 text-lg title-font font-medium mb-3 capitalize">Skills & Experience</h2>
+                        <h2 class="text-gray-300 text-lg title-font font-medium mb-3 capitalize">Skills & Experience
+                        </h2>
                         <p class="leading-relaxed text-base">Personal technology stack includes python, golang, next.js,
-                            solidity, vue3, react, uniapp, echarts, rabbitMQ, redis, mysql, mongodb, using Django and gin
+                            solidity, vue3, react, uniapp, echarts, rabbitMQ, redis, mysql, mongodb, using Django and
+                            gin
                             back-end framework, AI framework mastering numpy, pandas, svm, NLP, openCV , tensorFlow,
                             pytorch, etc.</p>
                     </div>

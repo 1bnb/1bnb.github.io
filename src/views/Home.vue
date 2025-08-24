@@ -3,19 +3,17 @@ import { reactive } from "vue";
 import Particles from "../components/Particles.vue";
 
 const routers = reactive([
-  { to: "/technology", title: "Technology" },
   { to: "/about", title: "About Me" },
   { to: "/contact", title: "Contact Me" }
 ]);
 
 const articles = reactive([
-  { link: "https://wsd.gitbook.io/vue3", title: "vue3" },
-  { link: "https://wsd.gitbook.io/python", title: "python" },
+  { to: "/technology", title: "Technology" },
 ]);
 
-function openLink(link: string) {
-  window.open(link, "_blank");
-}
+// function openLink(link: string) {
+//   window.open(link, "_blank");
+// }
 </script>
 
 <template>
@@ -50,13 +48,12 @@ function openLink(link: string) {
           Technical Documentation
         </h1>
         <p class="mb-8 leading-relaxed">
-          Below are some of my technical articles, about front-end, back-end,
-          chain end, various languages, everything is included.
+          Technical Documentation for Complex Frontend Styling.
         </p>
         <div class="flex justify-center gap-4">
-          <button v-for="article in articles" :key="article.link" @click="openLink(article.link)"
+          <button v-for="article in articles" :key="article.to"
             class="inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-            {{ article.title }}
+            <router-link :to="article.to">{{ article.title }}</router-link>
           </button>
         </div>
       </div>
